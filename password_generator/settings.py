@@ -63,10 +63,15 @@ WSGI_APPLICATION = 'password_generator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'password_generator_db',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres1234',
+        'HOST': 'localhost',  # Or IP if remote
+        'PORT': '5432',       # Default Postgres port
     }
 }
+
 
 
 # Password validation
